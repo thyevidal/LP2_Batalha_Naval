@@ -1,52 +1,67 @@
-package br.ufrn.imd.Modelo;
+package br.ufrn.imd.modelo;
 
 public abstract class Navio {
 	
-	private Orientacao orientacao;
-	private Posicao posicao;
-	private Estado estado;
+	protected boolean afundou;
+	protected int dano;
+	protected int tamanho;
+	protected int coordX;
+	protected int coordY;
 	
 	
 	public Navio() {
-
+		afundou = false;
+		dano = 0;
 	}
 
 
-	public Orientacao getOrientacao() {
-		return orientacao;
+	public boolean isAfundou() {
+		return afundou;
 	}
 
 
-	public void setOrientacao(Orientacao orientacao) {
-		this.orientacao = orientacao;
-	}
-
-	public Posicao getPosicao() {
-		return posicao;
+	public void setAfundou(boolean afundou) {
+		this.afundou = afundou;
 	}
 
 
-	public void setPosicao(Posicao posicao) {
-		this.posicao = posicao;
+	public int getDano() {
+		return dano;
 	}
 
 
-	public Estado getEstado() {
-		return estado;
+	public void setDano(int dano) {
+		this.dano = dano;
 	}
 
 
-	public void setEstado(Estado estado) {
-		this.estado = estado;
+	public int getCoordX() {
+		return coordX;
+	}
+
+
+	public void setCoordX(int coordX) {
+		this.coordX = coordX;
+	}
+
+
+	public int getCoordY() {
+		return coordY;
+	}
+
+
+	public void setCoordY(int coordY) {
+		this.coordY = coordY;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Afundou? = " + "\t" + afundou + "\n" + "Dano = " + "\t" + dano + "\n" + "Tamanho =" +"\t" + tamanho + " Coordenadas = (" + coordX + ","+ coordY + ")";
 	}
 	
-	public void Dados() {
-		System.out.println("############## --- Dados --- ##############");
-		System.out.println("Orientação: " + getOrientacao());
-		System.out.println("Posição: linha: " + getPosicao().getLinha() + " coluna: " + getPosicao().getColuna());
-		System.out.println("Estado: " + getEstado());
-	}
 	
+
 	
 	
 }
