@@ -1,21 +1,20 @@
-package br.ufrn.imd.Modelo;
+package br.ufrn.imd.modelo;
 
-public class Submarino extends Navio{
-	protected final int tamanho = 3;
+public class Submarino extends Navio {
 
 	public Submarino() {
-		
+		this.tamanho = 3;
+
 	}
 	
 	public int getTamanho() {
 		return this.tamanho;
 	}
-
 	
-	public void Dados() {
-		super.Dados();
-		System.out.println("Tamanho: " + getTamanho());
-		System.out.println("###########################################");
-		System.out.println("");
+	@Override
+	public void avisoAfundou() {
+		System.out.println("O Submarino foi destruído!");
+
 	}
+
 }
