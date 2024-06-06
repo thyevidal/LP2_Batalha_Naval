@@ -1,23 +1,20 @@
-package br.ufrn.imd.Modelo;
+package br.ufrn.imd.modelo;
 
-public class Corveta extends Navio{
+public class Corveta extends Navio {
 
-	protected final int tamanho = 2;
 
 	public Corveta() {
-		
+		this.tamanho = 2;
 	}
 	
 	public int getTamanho() {
 		return this.tamanho;
 	}
 
-	
-	public void Dados() {
-		super.Dados();
-		System.out.println("Tamanho: " + getTamanho());
-		System.out.println("###########################################");
-		System.out.println("");
+	@Override
+	public void avisoAfundou() {
+		System.out.println("O Corveta acabou de afundar!");
+		
 	}
 	
 }
