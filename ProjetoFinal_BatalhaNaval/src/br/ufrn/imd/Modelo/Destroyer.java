@@ -1,21 +1,20 @@
-package br.ufrn.imd.Modelo;
+package br.ufrn.imd.modelo;
 
 public class Destroyer extends Navio{
-	protected final int tamanho = 5;
+
 
 	public Destroyer() {
-		
+		this.tamanho = 5;
 	}
 	
 	public int getTamanho() {
 		return this.tamanho;
 	}
 
-	
-	public void Dados() {
-		super.Dados();
-		System.out.println("Tamanho: " + getTamanho());
-		System.out.println("###########################################");
-		System.out.println("");
+	@Override
+	public void avisoAfundou() {
+		System.out.println("Destroyer acabou de afundar!");
+		
 	}
+
 }
