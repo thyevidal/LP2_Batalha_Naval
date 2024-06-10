@@ -7,7 +7,7 @@ public class Casa extends Rectangle {
 	public int CoordX, CoordY;
 	public boolean atingida = false;
 	protected Navio navio;
-	public Casa (int x, int y, Tabuleiro tabuleiro)
+	public Casa (int x, int y, Navio navio)
 	{
 		super(40,40);
 		this.CoordX = x;
