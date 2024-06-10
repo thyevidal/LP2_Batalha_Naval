@@ -21,22 +21,24 @@ public class Principal extends Application {
 			
 			
 			//Criando uma cena
-			Parent root = FXMLLoader.load(getClass().getResource("/br/ufrn/imd/visao/BatalhaNaval.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/br/ufrn/imd/visao/Abertura.fxml"));
 			Scene scene = new Scene(root,600,600);
 			
 			
 			//Estilizando com CSS
-			String css = this.getClass().getResource("/application/aplication.css").toExternalForm();
+			String css = this.getClass().getResource("/br/ufrn/imd/Principal.css").toExternalForm();
 			scene.getStylesheets().add(css);
 			
 			
 			//Customizando o Stage
-			//Adicionando título ao Stage
+			//Adicionando tÃ­tulo ao Stage
 			primaryStage.setTitle("Batalha Naval");
-			//Adicionando ícone ao stage
-			Image icone = new Image("iconeNavio.png");
+			//Adicionando Ã­cone ao stage
+			Image icone = new Image("battleship (2).png");
 			primaryStage.getIcons().add(icone);
-
+			
+			//NÃ£o Ã© psosÃ­vel mudar o tamanho da janela
+			primaryStage.setResizable(false);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			
